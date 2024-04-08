@@ -1,6 +1,6 @@
 package max.order;
 
-import java.util.Map;
+import java.util.List;
 
 import lombok.Builder;
 import lombok.experimental.Accessors;
@@ -12,7 +12,7 @@ public record OrderOut(
     String clientId,
     String address,
     String orderDate,
-    Map<String, Integer> products,
+    List<OrderDetailOut> products,
     Double orderValue
 ) {
     
