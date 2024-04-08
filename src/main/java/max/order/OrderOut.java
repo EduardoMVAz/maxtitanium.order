@@ -10,8 +10,10 @@ import lombok.experimental.Accessors;
 public record OrderOut(
     String orderId,
     String clientId,
-    Map<Integer, Integer> products,
-    Integer orderValue
+    String address,
+    String orderDate,
+    Map<String, Integer> products,
+    Double orderValue
 ) {
     
 }

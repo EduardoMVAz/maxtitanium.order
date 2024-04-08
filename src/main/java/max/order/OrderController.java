@@ -1,5 +1,7 @@
 package max.order;
 
+import java.util.List;
+
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -23,4 +25,7 @@ public interface OrderController {
 
     @DeleteMapping("/orders/{id}")
     public ResponseEntity<OrderOut> delete(@PathVariable(required = true) String id);
+
+    @GetMapping("/orders/client/{client_id}")
+    public ResponseEntity<List<OrderOut>> readByClient(@PathVariable(required = true) String client_id);
 }
