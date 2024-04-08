@@ -26,6 +26,6 @@ public interface OrderController {
     @DeleteMapping("/orders/{id}")
     public ResponseEntity<OrderOut> delete(@PathVariable(required = true) String id);
 
-    @GetMapping("/orders/client/{client_id}")
-    public ResponseEntity<List<OrderOut>> readByClient(@PathVariable(required = true) String client_id);
+    @GetMapping("/orders/client/{id}")
+    public ResponseEntity<List<OrderOut>> readByClient(@PathVariable(required = true) String id);
 }
