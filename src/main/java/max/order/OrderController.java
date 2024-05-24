@@ -17,6 +17,9 @@ public interface OrderController {
     @GetMapping("/orders/{id}")
     public ResponseEntity<OrderOut> read(@PathVariable(required = true) String id);
 
+    @GetMapping("/orders")
+    public ResponseEntity<List<OrderOut>> list();
+
     @PostMapping("/orders")
     public ResponseEntity<OrderOut> create(@RequestBody(required = true) OrderIn orderIn);
 
